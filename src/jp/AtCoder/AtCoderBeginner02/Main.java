@@ -1,10 +1,10 @@
-package jp.AtCoder;
+package jp.AtCoder.AtCoderBeginner02;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class AtCoderBeginner03 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner sn = new Scanner(System.in);
 		List<String> list = new ArrayList<String>();
@@ -16,12 +16,14 @@ public class AtCoderBeginner03 {
 		sn.close();
 
 		String str = args[0];
-		char[] chars = str.toCharArray();
+		String[] values = str.split(" ");
+		int a = Integer.parseInt(values[0]);
+		int b = Integer.parseInt(values[1]);
 
-		int sum = 0;
-		for(int i=0;i<chars.length;i++) {
-			if(chars[i] == '1') sum++;
+		if((a * b)%2 == 0) {
+			System.out.println("Even");
+		}else {
+			System.out.println("Odd");
 		}
-		System.out.println(sum);
 	}
 }

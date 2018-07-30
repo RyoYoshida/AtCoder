@@ -1,5 +1,4 @@
 package test.jp.AtCoder;
-import jp.AtCoder.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -16,28 +15,28 @@ public class AtCoderTests {
 	public void atCoderTest() {
 		String ret;
 
-		ret = runAsIO("Hello World!!", (t) -> AtCoder.main(t));
+		ret = runAsIO("Hello World!!", (t) -> jp.AtCoder.AtCoder.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "Hello World!!");
 
-		ret = runAsIO("12 34\n567\n89", (t) -> AtCoderBeginner01.main(t));
+		ret = runAsIO("12 34\n567\n89", (t) ->  jp.AtCoder.AtCoderBeginner01.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "613 89");
-		ret = runAsIO("13 34\n567\n89", (t) -> AtCoderBeginner01.main(t));
+		ret = runAsIO("13 34\n567\n89", (t) -> jp.AtCoder.AtCoderBeginner01.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "614 89");
 
-		ret = runAsIO("3 4", (t) -> AtCoderBeginner02.main(t));
+		ret = runAsIO("3 4", (t) -> jp.AtCoder.AtCoderBeginner02.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "Even");
-		ret = runAsIO("1 21", (t) -> AtCoderBeginner02.main(t));
+		ret = runAsIO("1 21", (t) -> jp.AtCoder.AtCoderBeginner02.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "Odd");
 
-		ret = runAsIO("101", (t) -> AtCoderBeginner03.main(t));
+		ret = runAsIO("101", (t) -> jp.AtCoder.AtCoderBeginner03.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "2");
-		ret = runAsIO("000", (t) -> AtCoderBeginner03.main(t));
+		ret = runAsIO("000", (t) -> jp.AtCoder.AtCoderBeginner03.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "0");
 	}

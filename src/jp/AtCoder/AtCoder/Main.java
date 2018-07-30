@@ -1,6 +1,6 @@
-package jp.AtCoder;
+package jp.AtCoder.AtCoder;
 
-public class AtCoder {
+public class Main {
 	public static void main(String[] args){
 		System.out.println("Hello World!!");
 	}
