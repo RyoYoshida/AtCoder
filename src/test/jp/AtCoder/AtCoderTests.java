@@ -39,6 +39,16 @@ public class AtCoderTests {
 		ret = runAsIO("000", (t) -> jp.AtCoder.AtCoderBeginner03.Main.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "0");
+
+		ret = runAsIO("3\n8 12 40", (t) -> jp.AtCoder.AtCoderBeginner04.Main.main(t));
+		System.out.println(ret);
+		Assert.assertEquals(ret,  "2");
+		ret = runAsIO("4\n5 6 8 10", (t) -> jp.AtCoder.AtCoderBeginner04.Main.main(t));
+		System.out.println(ret);
+		Assert.assertEquals(ret,  "0");
+		ret = runAsIO("6\n382253568 723152896 37802240 379425024 404894720 471526144", (t) -> jp.AtCoder.AtCoderBeginner04.Main.main(t));
+		System.out.println(ret);
+		Assert.assertEquals(ret,  "8");
 	}
 
 	public String runAsIO(String str, Consumer<String[]> func) {
