@@ -33,6 +33,13 @@ public class AtCoderTests {
 		ret = runAsIO("1 21", (t) -> AtCoderBeginner02.main(t));
 		System.out.println(ret);
 		Assert.assertEquals(ret,  "Odd");
+
+		ret = runAsIO("101", (t) -> AtCoderBeginner03.main(t));
+		System.out.println(ret);
+		Assert.assertEquals(ret,  "2");
+		ret = runAsIO("000", (t) -> AtCoderBeginner03.main(t));
+		System.out.println(ret);
+		Assert.assertEquals(ret,  "0");
 	}
 
 	public String runAsIO(String str, Consumer<String[]> func) {
