@@ -6,16 +6,9 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner sn = new Scanner(System.in);
-		List<String> list = new ArrayList<String>();
-		while(sn.hasNextLine()) {
-		    String str = sn.nextLine();
-		    list.add(str);
-		}
-		args = list.toArray(new String[list.size()]);
-		sn.close();
+		String[] lines = scan();
 
-		String str = args[0];
+		String str = lines[0];
 		char[] chars = str.toCharArray();
 
 		int sum = 0;
@@ -23,5 +16,17 @@ public class Main {
 			if(chars[i] == '1') sum++;
 		}
 		System.out.println(sum);
+	}
+
+	public static String[] scan() {
+		List<String> list = new ArrayList<String>();
+
+		Scanner scanner = new Scanner(System.in);
+		while(scanner.hasNextLine()) {
+		    list.add(scanner.nextLine());
+		}
+		scanner.close();
+
+		return list.toArray(new String[list.size()]);
 	}
 }
